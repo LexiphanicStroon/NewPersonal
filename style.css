@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    background-color: #333;
+    height: 8vh;
+    color: white;
+}
+
+.site-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+
+}
+
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+}
+
+.navbar-links li {
+    list-style: none;
+
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    display: block;
+}
+
+.navbar-links li:hover {
+    background-color: #555;
+}
+
+.toggle-button {
+    position: absolute;
+    top: 1.4rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+
+}
+
+@media (max-width: 459px) {
+    .toggle-button {
+        display: flex;        
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;        
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;        
+    }
+    .navbar-links li {
+        text-align: center;
+    }
+
+    .navbar-links li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+.intro {
+    text-align: center;
+    margin-top: 10vh;
+    margin-bottom: 30vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: first baseline;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+}
+
+
+#welcome {
+    font-size: 1.3rem;
+}
+
+#about  {
+    font-size: 1.6rem;
+}
+
+.circle {
+    font-size: 1.2rem;
+    height: 18vh;
+    width: 18vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    border-radius: 50%;
+    color: white;
+}
+
+#hover {
+    text-align: center;
+    font-size: 1.7rem;
+}
+
+@property --num {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+}
+
+.counter {
+    text-align: center;
+    transition: --num 3.8s;
+    counter-set: num var(--num);
+    font-size: 6rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.counter::after {
+    content: counter(num);
+}
+
+div:hover {
+    --num: 7000;
+}
+
+#myLine {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: draw 5s linear forwards;
+  }
+
+  @keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+
+.columns {
+    display: flex; /* Use flexbox to create a row of columns */
+    flex-wrap: wrap; /* Allow the columns to wrap onto multiple rows */
+    justify-content: center; /* Center the columns horizontally */
+    align-items: center;
+    background-image: url(trees.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+  }
+  
+  .column {
+    flex: 1 0 30%; /* Each column takes up 30% of the available width, with a minimum width of 0 */
+    margin: 10px; /* Add some spacing between the columns */
+  }
+  
+  .column p {
+    font-size: 1.5rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    .columns {
+      flex-direction: column; /* Switch to a single column layout */
+      align-items: center; /* Center the columns vertically */
+      padding: 1rem;
+    }
+    
+    .column {
+      flex: 1 0 auto; /* Each column takes up the full width of the container */
+      margin: 10px 0; /* Remove the horizontal spacing between the columns */
+    }
+  }
+  
+.cta {
+    margin: 2rem 0;
+    text-align: center;
+    font-size: 2.3rem;
+    font-weight: 300;
+}
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+button[type=submit] {
+    background-color: #cedfd9;
+    color: #333;
+    font-size: .9rem;
+    font-weight: 600;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.container {
+    padding: 1rem;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    background-image: url(diagonal_building.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.contact {
+background-color: #212121;
+padding: 6rem;
+opacity: .9;
+border-radius: 12px;
+}

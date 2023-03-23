@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Top Nav -->
+    <nav class="navbar">
+        <div class="site-title">Nathaniel Reeves</div>
+        
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        
+        <div class="navbar-links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">My Work</a></li>
+            </ul>
+        </div>
+    </nav>
+<div class="intro">
+    <p id="welcome">Welcome Here</p>
+    
+    <p id="about">        
+        I'm an experienced developer working hard 
+        to make an online presence affordable for small business.
+        
+    </p>
+    
+    <div class="circle">
+        <p id="find-out">Find Out How</p>
+    </div>
+</div>
+<p id="hover">Hover the Number to see the average price of a website today</p>
+<div class="counter"></div>
+
+<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100%" height="100%" fill="#0A192F" />
+    <polyline id="myLine" points="0,180 50,150 100,140 150,130 200,120 250,100 300,80 350,60 400,40" stroke="#66B3FF" stroke-width="4" fill="none" />
+  </svg>
+  
+<div class="columns">
+    <div class="column">
+        <p>
+            That's why I'm committed to providing an affordable, 
+            entry level price for small businesses to maintain a modern online platform
+    </p>
+</div>
+    <div class="column">
+        <p>
+            All my websites come with a three 
+            month maintenance contract at <strong>no extra charge.</strong>
+    </p>
+    </div>
+    <div class="column">
+        <p>
+            That way if your website needs updating, or anything goes wrong, 
+            you don't have to stress
+    </p>
+    </div>
+</div>
+
+<div class="cta">
+    Get In Touch Today
+</div>
+
+<div class="container">
+    <form class="contact" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="a6e17586-fd50-48ed-8737-eafeb3d7f29d">
+        
+        
+        <input type="text" id="fname" name="firstname" placeholder="Your name...">
+        
+        
+        <input type="text" id="lname" name="lastname" placeholder="Your last name...">
+        
+        
+        <input type="text" id="address" name="address" placeholder="Your email...">
+        
+        
+        <input type="text" id="phone" name="phone" placeholder="Your phone...">
+        
+        
+        <input type="text" id="message" name="message" placeholder="Your message...">
+        
+        <input type="hidden" name="redirect" value="https://web3forms.com/success">
+        <button type="submit">Submit Form</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
